@@ -4,15 +4,21 @@ let timer;
 function startTimer() {
   clearInterval(timer);
   let seconds = parseInt(document.getElementById("recoveryTime").value, 10);
+  const original = seconds;
+
+  document.getElementById("recoveryText").innerText = "Recupero " + seconds + " secondi";
   document.getElementById("countdown").innerText = seconds;
   document.getElementById("timer-container").style.borderColor = "red";
+  document.getElementById("recoveryTime").style.backgroundColor = "red";
 
   timer = setInterval(() => {
     seconds--;
     document.getElementById("countdown").innerText = seconds;
     if (seconds <= 0) {
       clearInterval(timer);
+      document.getElementById("countdown").innerText = original;
       document.getElementById("timer-container").style.borderColor = "green";
+      document.getElementById("recoveryTime").style.backgroundColor = "green";
       playAlert();
     }
   }, 1000);
@@ -35,4 +41,15 @@ window.onload = () => {
       localStorage.setItem("weight" + i, input.value);
     });
   }
+
+  const recoveryInput = document.getElementById("recoveryTime");
+  const recoveryText = document.getElementById("recoveryText");
+
+  recoveryInput.addEventListener("input", () => {
+    const val = parseInt(recoveryInput.value, 10);
+    if (!isNaN(val)) {
+      recoveryText.innerText = "Recupero " + val + " secondi";
+      document.getElementById("countdown").innerText = val;
+    }
+  });
 };
