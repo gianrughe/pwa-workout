@@ -1,141 +1,157 @@
 <!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
-  <title>Giorno 4</title>
-</head>
-<body>
-  <div class="container">
-    <h1>Giorno 4</h1>
-    
-<div class="exercise-block">
-  <h2>Esercizio 1</h2>
-  <img src="panca-inclinata.jpg" alt="Esercizio 1" class="exercise-img" />
-  <p><strong>4 Serie - 10 Ripetizioni</strong></p>
-  <p id="recoveryText1">Recupero 75 secondi</p>
-  <div>
-    <div>Serie 1: <input type="number" id="weight1_1" placeholder="kg" /> kg</div>
-    <div>Serie 2: <input type="number" id="weight1_2" placeholder="kg" /> kg</div>
-    <div>Serie 3: <input type="number" id="weight1_3" placeholder="kg" /> kg</div>
-    <div>Serie 4: <input type="number" id="weight1_4" placeholder="kg" /> kg</div>
-  </div>
-  <button onclick="startTimer(1)" id="startBtn1">Start Recupero</button>
-  <div>
-    <input type="number" id="recoveryTime1" value="75" min="15" max="300"
-      style="font-size: 24px; font-weight: bold; text-align: center; width: 80px; margin-top: 10px;
-             border-radius: 8px; border: none; padding: 5px; background-color: green; color: white;" />
-  </div>
-  <div id="countdown1" style="margin-top: 10px; font-size: 28px;">75</div>
-</div>
-
-
-<div class="exercise-block">
-  <h2>Esercizio 2</h2>
-  <img src="panca-inclinata.jpg" alt="Esercizio 2" class="exercise-img" />
-  <p><strong>4 Serie - 10 Ripetizioni</strong></p>
-  <p id="recoveryText2">Recupero 75 secondi</p>
-  <div>
-    <div>Serie 1: <input type="number" id="weight2_1" placeholder="kg" /> kg</div>
-    <div>Serie 2: <input type="number" id="weight2_2" placeholder="kg" /> kg</div>
-    <div>Serie 3: <input type="number" id="weight2_3" placeholder="kg" /> kg</div>
-    <div>Serie 4: <input type="number" id="weight2_4" placeholder="kg" /> kg</div>
-  </div>
-  <button onclick="startTimer(2)" id="startBtn2">Start Recupero</button>
-  <div>
-    <input type="number" id="recoveryTime2" value="75" min="15" max="300"
-      style="font-size: 24px; font-weight: bold; text-align: center; width: 80px; margin-top: 10px;
-             border-radius: 8px; border: none; padding: 5px; background-color: green; color: white;" />
-  </div>
-  <div id="countdown2" style="margin-top: 10px; font-size: 28px;">75</div>
-</div>
-
-
-<div class="exercise-block">
-  <h2>Esercizio 3</h2>
-  <img src="panca-inclinata.jpg" alt="Esercizio 3" class="exercise-img" />
-  <p><strong>4 Serie - 10 Ripetizioni</strong></p>
-  <p id="recoveryText3">Recupero 75 secondi</p>
-  <div>
-    <div>Serie 1: <input type="number" id="weight3_1" placeholder="kg" /> kg</div>
-    <div>Serie 2: <input type="number" id="weight3_2" placeholder="kg" /> kg</div>
-    <div>Serie 3: <input type="number" id="weight3_3" placeholder="kg" /> kg</div>
-    <div>Serie 4: <input type="number" id="weight3_4" placeholder="kg" /> kg</div>
-  </div>
-  <button onclick="startTimer(3)" id="startBtn3">Start Recupero</button>
-  <div>
-    <input type="number" id="recoveryTime3" value="75" min="15" max="300"
-      style="font-size: 24px; font-weight: bold; text-align: center; width: 80px; margin-top: 10px;
-             border-radius: 8px; border: none; padding: 5px; background-color: green; color: white;" />
-  </div>
-  <div id="countdown3" style="margin-top: 10px; font-size: 28px;">75</div>
-</div>
-
-
-<div class="exercise-block">
-  <h2>Esercizio 4</h2>
-  <img src="panca-inclinata.jpg" alt="Esercizio 4" class="exercise-img" />
-  <p><strong>4 Serie - 10 Ripetizioni</strong></p>
-  <p id="recoveryText4">Recupero 75 secondi</p>
-  <div>
-    <div>Serie 1: <input type="number" id="weight4_1" placeholder="kg" /> kg</div>
-    <div>Serie 2: <input type="number" id="weight4_2" placeholder="kg" /> kg</div>
-    <div>Serie 3: <input type="number" id="weight4_3" placeholder="kg" /> kg</div>
-    <div>Serie 4: <input type="number" id="weight4_4" placeholder="kg" /> kg</div>
-  </div>
-  <button onclick="startTimer(4)" id="startBtn4">Start Recupero</button>
-  <div>
-    <input type="number" id="recoveryTime4" value="75" min="15" max="300"
-      style="font-size: 24px; font-weight: bold; text-align: center; width: 80px; margin-top: 10px;
-             border-radius: 8px; border: none; padding: 5px; background-color: green; color: white;" />
-  </div>
-  <div id="countdown4" style="margin-top: 10px; font-size: 28px;">75</div>
-</div>
-
-
-<div class="exercise-block">
-  <h2>Esercizio 5</h2>
-  <img src="panca-inclinata.jpg" alt="Esercizio 5" class="exercise-img" />
-  <p><strong>4 Serie - 10 Ripetizioni</strong></p>
-  <p id="recoveryText5">Recupero 75 secondi</p>
-  <div>
-    <div>Serie 1: <input type="number" id="weight5_1" placeholder="kg" /> kg</div>
-    <div>Serie 2: <input type="number" id="weight5_2" placeholder="kg" /> kg</div>
-    <div>Serie 3: <input type="number" id="weight5_3" placeholder="kg" /> kg</div>
-    <div>Serie 4: <input type="number" id="weight5_4" placeholder="kg" /> kg</div>
-  </div>
-  <button onclick="startTimer(5)" id="startBtn5">Start Recupero</button>
-  <div>
-    <input type="number" id="recoveryTime5" value="75" min="15" max="300"
-      style="font-size: 24px; font-weight: bold; text-align: center; width: 80px; margin-top: 10px;
-             border-radius: 8px; border: none; padding: 5px; background-color: green; color: white;" />
-  </div>
-  <div id="countdown5" style="margin-top: 10px; font-size: 28px;">75</div>
-</div>
-
-
-<div class="exercise-block">
-  <h2>Esercizio 6</h2>
-  <img src="panca-inclinata.jpg" alt="Esercizio 6" class="exercise-img" />
-  <p><strong>4 Serie - 10 Ripetizioni</strong></p>
-  <p id="recoveryText6">Recupero 75 secondi</p>
-  <div>
-    <div>Serie 1: <input type="number" id="weight6_1" placeholder="kg" /> kg</div>
-    <div>Serie 2: <input type="number" id="weight6_2" placeholder="kg" /> kg</div>
-    <div>Serie 3: <input type="number" id="weight6_3" placeholder="kg" /> kg</div>
-    <div>Serie 4: <input type="number" id="weight6_4" placeholder="kg" /> kg</div>
-  </div>
-  <button onclick="startTimer(6)" id="startBtn6">Start Recupero</button>
-  <div>
-    <input type="number" id="recoveryTime6" value="75" min="15" max="300"
-      style="font-size: 24px; font-weight: bold; text-align: center; width: 80px; margin-top: 10px;
-             border-radius: 8px; border: none; padding: 5px; background-color: green; color: white;" />
-  </div>
-  <div id="countdown6" style="margin-top: 10px; font-size: 28px;">75</div>
-</div>
-
-  </div>
-</body>
-</html>
+    <html lang="it">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Giorno 4</title>
+    </head>
+    <body>
+      
+        <section style='margin-bottom:40px'>
+          <div class="container" id="timer-container1">
+            <h1>Panca Inclinata 1</h1>
+            <p><strong>4 Serie - 10 Ripetizioni</strong></p>
+            <p id="recoveryText1">Recupero 75 secondi</p>
+            <div id="sets">
+              <div>Serie 1: <input type="number" id="weight11" placeholder="kg" /> kg</div>
+              <div>Serie 2: <input type="number" id="weight12" placeholder="kg" /> kg</div>
+              <div>Serie 3: <input type="number" id="weight13" placeholder="kg" /> kg</div>
+              <div>Serie 4: <input type="number" id="weight14" placeholder="kg" /> kg</div>
+            </div>
+            <button onclick="startTimer(1)" id="btn1">Start Recupero</button>
+            <div>
+              <input type="number" id="recoveryTime1" value="75" min="15" max="300"
+                style="font-size: 32px; font-weight: bold; text-align: center; width: 100px; margin-top: 10px;
+                      border-radius: 8px; border: none; padding: 5px; background-color: green; color: white;" />
+            </div>
+            <div id="countdown1" style="margin-top: 10px; font-size: 32px;">75</div>
+            <div class="images">
+              <img src="panca-inclinata.jpg" alt="Panca Inclinata" />
+            </div>
+          </div>
+        </section>
+        
+        <section style='margin-bottom:40px'>
+          <div class="container" id="timer-container2">
+            <h1>Panca Inclinata 2</h1>
+            <p><strong>4 Serie - 10 Ripetizioni</strong></p>
+            <p id="recoveryText2">Recupero 75 secondi</p>
+            <div id="sets">
+              <div>Serie 1: <input type="number" id="weight21" placeholder="kg" /> kg</div>
+              <div>Serie 2: <input type="number" id="weight22" placeholder="kg" /> kg</div>
+              <div>Serie 3: <input type="number" id="weight23" placeholder="kg" /> kg</div>
+              <div>Serie 4: <input type="number" id="weight24" placeholder="kg" /> kg</div>
+            </div>
+            <button onclick="startTimer(2)" id="btn2">Start Recupero</button>
+            <div>
+              <input type="number" id="recoveryTime2" value="75" min="15" max="300"
+                style="font-size: 32px; font-weight: bold; text-align: center; width: 100px; margin-top: 10px;
+                      border-radius: 8px; border: none; padding: 5px; background-color: green; color: white;" />
+            </div>
+            <div id="countdown2" style="margin-top: 10px; font-size: 32px;">75</div>
+            <div class="images">
+              <img src="panca-inclinata.jpg" alt="Panca Inclinata" />
+            </div>
+          </div>
+        </section>
+        
+        <section style='margin-bottom:40px'>
+          <div class="container" id="timer-container3">
+            <h1>Panca Inclinata 3</h1>
+            <p><strong>4 Serie - 10 Ripetizioni</strong></p>
+            <p id="recoveryText3">Recupero 75 secondi</p>
+            <div id="sets">
+              <div>Serie 1: <input type="number" id="weight31" placeholder="kg" /> kg</div>
+              <div>Serie 2: <input type="number" id="weight32" placeholder="kg" /> kg</div>
+              <div>Serie 3: <input type="number" id="weight33" placeholder="kg" /> kg</div>
+              <div>Serie 4: <input type="number" id="weight34" placeholder="kg" /> kg</div>
+            </div>
+            <button onclick="startTimer(3)" id="btn3">Start Recupero</button>
+            <div>
+              <input type="number" id="recoveryTime3" value="75" min="15" max="300"
+                style="font-size: 32px; font-weight: bold; text-align: center; width: 100px; margin-top: 10px;
+                      border-radius: 8px; border: none; padding: 5px; background-color: green; color: white;" />
+            </div>
+            <div id="countdown3" style="margin-top: 10px; font-size: 32px;">75</div>
+            <div class="images">
+              <img src="panca-inclinata.jpg" alt="Panca Inclinata" />
+            </div>
+          </div>
+        </section>
+        
+        <section style='margin-bottom:40px'>
+          <div class="container" id="timer-container4">
+            <h1>Panca Inclinata 4</h1>
+            <p><strong>4 Serie - 10 Ripetizioni</strong></p>
+            <p id="recoveryText4">Recupero 75 secondi</p>
+            <div id="sets">
+              <div>Serie 1: <input type="number" id="weight41" placeholder="kg" /> kg</div>
+              <div>Serie 2: <input type="number" id="weight42" placeholder="kg" /> kg</div>
+              <div>Serie 3: <input type="number" id="weight43" placeholder="kg" /> kg</div>
+              <div>Serie 4: <input type="number" id="weight44" placeholder="kg" /> kg</div>
+            </div>
+            <button onclick="startTimer(4)" id="btn4">Start Recupero</button>
+            <div>
+              <input type="number" id="recoveryTime4" value="75" min="15" max="300"
+                style="font-size: 32px; font-weight: bold; text-align: center; width: 100px; margin-top: 10px;
+                      border-radius: 8px; border: none; padding: 5px; background-color: green; color: white;" />
+            </div>
+            <div id="countdown4" style="margin-top: 10px; font-size: 32px;">75</div>
+            <div class="images">
+              <img src="panca-inclinata.jpg" alt="Panca Inclinata" />
+            </div>
+          </div>
+        </section>
+        
+        <section style='margin-bottom:40px'>
+          <div class="container" id="timer-container5">
+            <h1>Panca Inclinata 5</h1>
+            <p><strong>4 Serie - 10 Ripetizioni</strong></p>
+            <p id="recoveryText5">Recupero 75 secondi</p>
+            <div id="sets">
+              <div>Serie 1: <input type="number" id="weight51" placeholder="kg" /> kg</div>
+              <div>Serie 2: <input type="number" id="weight52" placeholder="kg" /> kg</div>
+              <div>Serie 3: <input type="number" id="weight53" placeholder="kg" /> kg</div>
+              <div>Serie 4: <input type="number" id="weight54" placeholder="kg" /> kg</div>
+            </div>
+            <button onclick="startTimer(5)" id="btn5">Start Recupero</button>
+            <div>
+              <input type="number" id="recoveryTime5" value="75" min="15" max="300"
+                style="font-size: 32px; font-weight: bold; text-align: center; width: 100px; margin-top: 10px;
+                      border-radius: 8px; border: none; padding: 5px; background-color: green; color: white;" />
+            </div>
+            <div id="countdown5" style="margin-top: 10px; font-size: 32px;">75</div>
+            <div class="images">
+              <img src="panca-inclinata.jpg" alt="Panca Inclinata" />
+            </div>
+          </div>
+        </section>
+        
+        <section style='margin-bottom:40px'>
+          <div class="container" id="timer-container6">
+            <h1>Panca Inclinata 6</h1>
+            <p><strong>4 Serie - 10 Ripetizioni</strong></p>
+            <p id="recoveryText6">Recupero 75 secondi</p>
+            <div id="sets">
+              <div>Serie 1: <input type="number" id="weight61" placeholder="kg" /> kg</div>
+              <div>Serie 2: <input type="number" id="weight62" placeholder="kg" /> kg</div>
+              <div>Serie 3: <input type="number" id="weight63" placeholder="kg" /> kg</div>
+              <div>Serie 4: <input type="number" id="weight64" placeholder="kg" /> kg</div>
+            </div>
+            <button onclick="startTimer(6)" id="btn6">Start Recupero</button>
+            <div>
+              <input type="number" id="recoveryTime6" value="75" min="15" max="300"
+                style="font-size: 32px; font-weight: bold; text-align: center; width: 100px; margin-top: 10px;
+                      border-radius: 8px; border: none; padding: 5px; background-color: green; color: white;" />
+            </div>
+            <div id="countdown6" style="margin-top: 10px; font-size: 32px;">75</div>
+            <div class="images">
+              <img src="panca-inclinata.jpg" alt="Panca Inclinata" />
+            </div>
+          </div>
+        </section>
+        
+      <script src="script.js"></script>
+    </body>
+    </html>
