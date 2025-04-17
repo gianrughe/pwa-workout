@@ -1,24 +1,49 @@
 
 let timer;
+let isRunning = false;
+let originalSeconds = 75;
 
 function startTimer() {
-  clearInterval(timer);
-  let seconds = parseInt(document.getElementById("recoveryTime").value, 10);
-  const original = seconds;
+  const recoveryInput = document.getElementById("recoveryTime");
+  const countdown = document.getElementById("countdown");
+  const container = document.getElementById("timer-container");
+  const startBtn = document.querySelector("button");
+
+  if (isRunning) {
+    // STOP: reset
+    clearInterval(timer);
+    isRunning = false;
+    countdown.innerText = originalSeconds;
+    container.style.borderColor = "green";
+    recoveryInput.style.backgroundColor = "green";
+    startBtn.textContent = "Start Recupero";
+    startBtn.style.backgroundColor = "green";
+    return;
+  }
+
+  // START
+  originalSeconds = parseInt(recoveryInput.value, 10);
+  let seconds = originalSeconds;
 
   document.getElementById("recoveryText").innerText = "Recupero " + seconds + " secondi";
-  document.getElementById("countdown").innerText = seconds;
-  document.getElementById("timer-container").style.borderColor = "red";
-  document.getElementById("recoveryTime").style.backgroundColor = "red";
+  countdown.innerText = seconds;
+  container.style.borderColor = "red";
+  recoveryInput.style.backgroundColor = "red";
+  startBtn.textContent = "Stop Recupero";
+  startBtn.style.backgroundColor = "red";
+  isRunning = true;
 
   timer = setInterval(() => {
     seconds--;
-    document.getElementById("countdown").innerText = seconds;
+    countdown.innerText = seconds;
     if (seconds <= 0) {
       clearInterval(timer);
-      document.getElementById("countdown").innerText = original;
-      document.getElementById("timer-container").style.borderColor = "green";
-      document.getElementById("recoveryTime").style.backgroundColor = "green";
+      isRunning = false;
+      countdown.innerText = originalSeconds;
+      container.style.borderColor = "green";
+      recoveryInput.style.backgroundColor = "green";
+      startBtn.textContent = "Start Recupero";
+      startBtn.style.backgroundColor = "green";
       playAlert();
     }
   }, 1000);
@@ -44,12 +69,23 @@ window.onload = () => {
 
   const recoveryInput = document.getElementById("recoveryTime");
   const recoveryText = document.getElementById("recoveryText");
+  const countdown = document.getElementById("countdown");
+
+  const val = parseInt(recoveryInput.value, 10);
+  recoveryText.innerText = "Recupero " + val + " secondi";
+  countdown.innerText = val;
+  recoveryInput.style.backgroundColor = "green";
+  document.getElementById("timer-container").style.borderColor = "green";
 
   recoveryInput.addEventListener("input", () => {
-    const val = parseInt(recoveryInput.value, 10);
-    if (!isNaN(val)) {
-      recoveryText.innerText = "Recupero " + val + " secondi";
-      document.getElementById("countdown").innerText = val;
+    const newVal = parseInt(recoveryInput.value, 10);
+    if (!isNaN(newVal)) {
+      recoveryText.innerText = "Recupero " + newVal + " secondi";
+      countdown.innerText = newVal;
+      originalSeconds = newVal;
     }
   });
+
+  const startBtn = document.querySelector("button");
+  startBtn.style.backgroundColor = "green";
 };
