@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Panca Piana</title>
+</head>
+<body>
+  <div class="container" id="timer-container">
+    <h1>Panca Piana</h1>
+    <p>4 serie da 10 ripetizioni</p>
+    <div id="sets">
+      <div>Serie 1: <input type="number" id="weight1" placeholder="kg" /> kg</div>
+      <div>Serie 2: <input type="number" id="weight2" placeholder="kg" /> kg</div>
+      <div>Serie 3: <input type="number" id="weight3" placeholder="kg" /> kg</div>
+      <div>Serie 4: <input type="number" id="weight4" placeholder="kg" /> kg</div>
+    </div>
+    <button onclick="startTimer()">Start Recupero</button>
+    <div id="countdown">90</div>
+    <div class="images">
+      <img src="start.jpg" alt="Posizione iniziale" />
+      <img src="end.jpg" alt="Posizione finale" />
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
