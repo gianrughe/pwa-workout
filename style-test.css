@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+body {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 20px solid green;
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  margin-top: 30px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: green;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+#countdown {
+  font-size: 32px;
+  margin-top: 10px;
+  color: #ffd700;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.images img {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #555;
+}
+
+.exercise-block {
+  border: 2px solid #555;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #2a2a2a;
+}
+.exercise-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
