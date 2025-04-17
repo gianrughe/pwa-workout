@@ -10,7 +10,8 @@
 <body>
   <div class="container" id="timer-container">
     <h1>Panca Inclinata</h1>
-    <p>4 serie da 10 ripetizioni</p>
+    <p><strong>4 Serie - 10 Ripetizioni</strong></p>
+    <p>Recupero <input type="number" id="recoveryTime" value="75" min="15" max="300" style="width: 60px; text-align:center;" /> secondi</p>
     <div id="sets">
       <div>Serie 1: <input type="number" id="weight1" placeholder="kg" /> kg</div>
       <div>Serie 2: <input type="number" id="weight2" placeholder="kg" /> kg</div>
@@ -18,7 +19,7 @@
       <div>Serie 4: <input type="number" id="weight4" placeholder="kg" /> kg</div>
     </div>
     <button onclick="startTimer()">Start Recupero</button>
-    <div id="countdown">90</div>
+    <div id="countdown">75</div>
     <div class="images">
       <img src="panca-inclinata.jpg" alt="Panca Inclinata" />
     </div>

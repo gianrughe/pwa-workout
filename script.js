@@ -1,18 +1,20 @@
+
 let timer;
-let seconds = 90;
 
 function startTimer() {
   clearInterval(timer);
-  seconds = 90;
+  let seconds = parseInt(document.getElementById("recoveryTime").value, 10);
+  document.getElementById("countdown").innerText = seconds;
   document.getElementById("timer-container").style.borderColor = "red";
+
   timer = setInterval(() => {
+    seconds--;
     document.getElementById("countdown").innerText = seconds;
     if (seconds <= 0) {
       clearInterval(timer);
       document.getElementById("timer-container").style.borderColor = "green";
       playAlert();
     }
-    seconds--;
   }, 1000);
 }
 
