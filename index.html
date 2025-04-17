@@ -3,32 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="style.css" />
-  <title>Panca Inclinata</title>
+  <title>Il tuo Programma</title>
 </head>
 <body>
-  <div class="container" id="timer-container">
-    <h1>Panca Inclinata</h1>
-    <p><strong>4 Serie - 10 Ripetizioni</strong></p>
-    <p id="recoveryText">Recupero 75 secondi</p>
-    <div id="sets">
-      <div>Serie 1: <input type="number" id="weight1" placeholder="kg" /> kg</div>
-      <div>Serie 2: <input type="number" id="weight2" placeholder="kg" /> kg</div>
-      <div>Serie 3: <input type="number" id="weight3" placeholder="kg" /> kg</div>
-      <div>Serie 4: <input type="number" id="weight4" placeholder="kg" /> kg</div>
-    </div>
-    <button onclick="startTimer()">Start Recupero</button>
-    <div>
-      <input type="number" id="recoveryTime" value="75" min="15" max="300"
-        style="font-size: 32px; font-weight: bold; text-align: center; width: 100px; margin-top: 10px;
-               border-radius: 8px; border: none; padding: 5px; background-color: red; color: white;" />
-    </div>
-    <div id="countdown" style="margin-top: 10px; font-size: 32px;">75</div>
-    <div class="images">
-      <img src="panca-inclinata.jpg" alt="Panca Inclinata" />
+  <div class="home-container">
+    <h1 class="home-title">Il tuo Programma</h1>
+    <div class="program-list">
+      <a href="giorno1.html" class="program-button">
+        <div class="day-title">Giorno 1</div>
+        <div class="muscle-group">PETTORALI + BICIPITI</div>
+      </a>
+      <a href="giorno2.html" class="program-button">
+        <div class="day-title">Giorno 2</div>
+        <div class="muscle-group">DORSALI + TRICIPITI</div>
+      </a>
+      <a href="giorno3.html" class="program-button">
+        <div class="day-title">Giorno 3</div>
+        <div class="muscle-group">GAMBE + ADDOME</div>
+      </a>
+      <a href="giorno4.html" class="program-button">
+        <div class="day-title">Giorno 4</div>
+        <div class="muscle-group">SPALLE + BICIPITI</div>
+      </a>
+      <a href="giorno5.html" class="program-button">
+        <div class="day-title">Giorno 5</div>
+        <div class="muscle-group">FULL BODY</div>
+      </a>
+      <a href="giorno6.html" class="program-button">
+        <div class="day-title">Giorno 6</div>
+        <div class="muscle-group">CARDIO + CORE</div>
+      </a>
     </div>
   </div>
-  <script src="script.js"></script>
 </body>
 </html>
